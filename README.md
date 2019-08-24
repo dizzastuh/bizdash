@@ -1,2 +1,2 @@
-# bizdash-server
+# bizdash
 Serves the Biz data
