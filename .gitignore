@@ -5,3 +5,4 @@
 /.blackbox/pubring.kbx~
 /.blackbox/secring.gpg
 /charts/db/secrets.yaml
+/charts/db/values.yaml
