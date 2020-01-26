@@ -1,2 +1,3 @@
 charts/db/secrets.yaml
 charts/db/values.yaml
+terraform/network/network.tfvars

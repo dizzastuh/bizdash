@@ -1,8 +1,11 @@
 **/secrets.yaml
 **/values.yaml
+**/*.tfvars
+
+
+# --- BLACKBOX --- #
 
 /.blackbox/pubring.gpg~
 /.blackbox/pubring.kbx~
 /.blackbox/secring.gpg
-/charts/db/secrets.yaml
-/charts/db/values.yaml
+/terraform/network/network.tfvars
