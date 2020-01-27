@@ -1,7 +1,12 @@
-# -- Creds -- #
+# -- GENERAL - from shared -- #
 
 variable "creds_file" {
   description = "Path to the Google credentials file to use for this project"
+  type        = string
+}
+
+variable "env" {
+  description = "Name of the project"
   type        = string
 }
 
