@@ -15,9 +15,7 @@ provider "google" {
 
 resource "google_storage_bucket" "tf_state_bucket" {
   name     = var.state_bucket_name
-  location = var.location 
-
-  storage_class = "REGIONAL"
+  location = var.location
 
   versioning {
     enabled = true
@@ -27,7 +25,7 @@ resource "google_storage_bucket" "tf_state_bucket" {
 # -- IAM for State Bucket -- #
 
 resource "google_project_iam_custom_role" "terraform_role" {
-  role_id     = "TFRole${title(var.env)}"
+  role_id     = "terraform${var.env}"
   title       = "Terraform Role (${title(var.env)})"
   permissions = ["iam.roles.list"]
 }
