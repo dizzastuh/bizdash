@@ -1,7 +1,9 @@
+# --- ENCRYPTED FILES --- #
+
 **/secrets.yaml
 **/values.yaml
 **/*.tfvars
-
+**/.envrc
 
 # --- BLACKBOX --- #
 
@@ -9,3 +11,8 @@
 /.blackbox/pubring.kbx~
 /.blackbox/secring.gpg
 /terraform/network/network.tfvars
+
+# --- GENERATED TERRAFORM FILES --- #
+
+**/*.tfstate
+/terraform/_state/state.tfvars
