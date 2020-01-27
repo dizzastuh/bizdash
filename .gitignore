@@ -10,7 +10,6 @@
 /.blackbox/pubring.gpg~
 /.blackbox/pubring.kbx~
 /.blackbox/secring.gpg
-/terraform/network/network.tfvars
 
 # --- GENERATED TERRAFORM FILES --- #
 
