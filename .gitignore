@@ -15,4 +15,4 @@
 # --- GENERATED TERRAFORM FILES --- #
 
 **/.terraform/*
-/terraform/_state/prod.tfvars
+**/terraform.*

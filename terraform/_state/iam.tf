@@ -12,6 +12,6 @@ data "google_iam_policy" "terraform_bucket" {
 }
 
 resource "google_storage_bucket_iam_policy" "editor" {
-  bucket      = google_storage_bucket.tf-state-bucket.name
+  bucket      = google_storage_bucket.tf_state_bucket.name
   policy_data = data.google_iam_policy.terraform_bucket.policy_data
 }
