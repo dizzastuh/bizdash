@@ -1,5 +1,5 @@
 charts/db/secrets.yaml
 charts/db/values.yaml
 terraform/.envrc
-terraform/_state/prod.tfvars
-terraform/network/prod.tfvars
+terraform/0_state/prod.tfvars
+terraform/1_network/prod.tfvars
