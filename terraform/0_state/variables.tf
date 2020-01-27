@@ -1,4 +1,5 @@
-# -- CREDS --  FROM ENV -- #
+# -- Creds -- #
+
 variable "creds_file" {
   description = "Path to the Google credentials file to use for this project"
   type        = string
