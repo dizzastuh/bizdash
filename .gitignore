@@ -17,3 +17,4 @@
 **/*.tfstate
 /terraform/_state/state.tfvars
 /terraform/.envrc
+/terraform/network/network.tfvars

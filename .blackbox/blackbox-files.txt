@@ -2,3 +2,4 @@ charts/db/secrets.yaml
 charts/db/values.yaml
 terraform/.envrc
 terraform/_state/state.tfvars
+terraform/network/network.tfvars
