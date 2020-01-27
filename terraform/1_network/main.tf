@@ -4,7 +4,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = "${file("${var.creds_file}")}"
+  credentials = file(var.creds_file)
   project     = var.project
   region      = var.region
   zone        = var.zone
