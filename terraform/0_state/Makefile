@@ -1,6 +1,7 @@
 default: help
 
-VAR_FILES =	-var-file="$(TF_VAR_env).tfvars"
+VAR_FILES =	-var-file="$(ENV).tfvars" \
+				-var-file="../env_common/$(ENV).tfvars"
 
 
 .PHONY: init

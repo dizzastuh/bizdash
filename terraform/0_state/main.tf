@@ -11,6 +11,7 @@ provider "google" {
   zone        = var.zone
 }
 
+
 # -- State Bucket -- #
 
 resource "google_storage_bucket" "tf_state_bucket" {
@@ -22,8 +23,8 @@ resource "google_storage_bucket" "tf_state_bucket" {
   }
 }
 
-# -- IAM for State Bucket -- #
 
+# -- IAM for State Bucket -- #
 
 data "google_iam_policy" "admin" {
   binding {

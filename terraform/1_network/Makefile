@@ -1,11 +1,15 @@
 default: help
 
-VAR_FILES =	-var-file="$(TF_VAR_env).tfvars"
+VAR_FILES =	-var-file="$(ENV).tfvars" \
+				-var-file="../env_common/$(ENV).tfvars"
 
 
 .PHONY: init
 init:
-	terraform init ${VAR_FILES}
+	terraform init \
+		-backend-config="bucket=$(TF_VAR_project)-tfstate-$(ENV)" \
+		-backend-config="region=$(TF_VAR_region)" \
+		-backend-config="prefix=network"
 
 
 .PHONY: plan
