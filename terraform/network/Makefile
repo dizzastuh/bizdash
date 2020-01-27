@@ -1,20 +1,28 @@
 default: help
 
-VAR_FILES = -var-file="$(TF_VAR_env).tfvars"
+VAR_FILES =	-var-file="$(TF_VAR_env).tfvars"
 
 
-.PHONY
+.PHONY: init
 init:
-	terraform init --var-files ${VAR_FILES}
+	terraform init ${VAR_FILES}
 
-.PHONY
+
+.PHONY: plan
+plan:
+	terraform plan ${VAR_FILES}
+
+
+.PHONY: refresh
 refresh:
-	terraform refresh --var-files ${VAR_FILES}
+	terraform refresh ${VAR_FILES}
 
-.PHONY
+
+.PHONY: apply
 apply:
-	terraform apply --var-files ${VAR_FILES}
+	terraform apply ${VAR_FILES}
 
-.PHONY
+
+.PHONY: destroy
 destroy:
-	terraform destroy --var-files ${VAR_FILES}
+	terraform destroy ${VAR_FILES}
