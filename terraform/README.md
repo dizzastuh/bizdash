@@ -4,3 +4,8 @@
 
 
 At the moment, this only includes the pieces relating to the Domain
+
+
+# Troubleshooting
+
+If an error like `Invalid JWT Signature`, create and pull down a fresh key for the service account.
