@@ -1,4 +1,5 @@
 charts/db/secrets.yaml
 charts/db/values.yaml
 terraform/.envrc
+terraform/_state/prod.tfvars
 terraform/network/network.tfvars
