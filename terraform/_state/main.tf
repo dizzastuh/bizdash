@@ -1,8 +1,8 @@
 provider "google" {
-  credentials = "${file("account.json")}"
-  project     = "${var.project}"
-  region      = "${var.region}"
-  zone        = "${var.zone}"
+  credentials = file(var.creds_file)
+  project     = var.project
+  region      = var.region
+  zone        = var.zone
 }
 
 terraform {
@@ -10,12 +10,12 @@ terraform {
 }
 
 resource "google_storage_bucket" "tf-state-bucket" {
-  name     = "${var.state_bucket_name}"
-  location = "${var.location}"  
+  name     = var.state_bucket_name
+  location = var.location 
 
   storage_class = "REGIONAL"
 
-  versioning = {
+  versioning {
     enabled = true
   }
 }
@@ -23,11 +23,11 @@ resource "google_storage_bucket" "tf-state-bucket" {
 data "google_iam_policy" "admin" {
   binding {
     role = "roles/storage.admin"
-    members = var.bucket_users
+    members = var.state_bucket_users
   }
 }
 
 resource "google_storage_bucket_iam_policy" "editor" {
-  bucket = "${google_storage_bucket.default.name}"
-  policy_data = "${data.google_iam_policy.admin.policy_data}"
+  bucket = google_storage_bucket.tf-state-bucket.name
+  policy_data = data.google_iam_policy.admin.policy_data
 }

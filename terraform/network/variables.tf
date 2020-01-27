@@ -17,6 +17,11 @@ variable "zone" {
   description = "Zone the project uses"
 }
 
+variable "state_bucket_name" {
+    description = "Name of the bucket in which the state is stored"
+    type = string
+}
+
 # -- KMS -- #
 variable "key_ring_name" {
   description = "name of the kms key ring to create"
