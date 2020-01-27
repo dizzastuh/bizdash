@@ -24,20 +24,15 @@ resource "google_storage_bucket" "tf_state_bucket" {
 
 # -- IAM for State Bucket -- #
 
-resource "google_project_iam_custom_role" "terraform_role" {
-  role_id     = "terraform${var.env}"
-  title       = "Terraform Role (${title(var.env)})"
-  permissions = ["iam.roles.list"]
-}
 
-data "google_iam_policy" "terraform_bucket" {
+data "google_iam_policy" "admin" {
   binding {
-    role    = google_project_iam_custom_role.terraform_role.role_id
+    role    = "roles/storage.admin"
     members = var.state_bucket_users
   }
 }
 
-resource "google_storage_bucket_iam_policy" "editor" {
+resource "google_storage_bucket_iam_policy" "terraformer" {
   bucket      = google_storage_bucket.tf_state_bucket.name
-  policy_data = data.google_iam_policy.terraform_bucket.policy_data
+  policy_data = data.google_iam_policy.admin.policy_data
 }
