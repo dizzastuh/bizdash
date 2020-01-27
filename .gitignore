@@ -16,3 +16,4 @@
 
 **/.terraform/*
 **/terraform.*
+/terraform/network/prod.tfvars
