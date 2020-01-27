@@ -17,5 +17,5 @@ provider "google" {
 # -- Domain IP -- #
 
 resource "google_compute_address" "ip_address" {
-  name = "${var.ip_name}-${var.env}"
+  name = "${var.project}-ip-${var.env}"
 }

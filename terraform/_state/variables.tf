@@ -10,6 +10,11 @@ variable "creds_file" {
   type        = string
 }
 
+variable "project" {
+  description = "Name of the project"
+  type        = string
+}
+
 variable "region" {
   description = "Region the project uses"
   type        = string
@@ -20,13 +25,15 @@ variable "zone" {
   type        = string
 }
 
-variable "state_bucket_name" {
-    description = "Name of the bucket in which the state is stored"
-    type        = string
-}
+# -- State -- #
 
 variable "location" {
     description = "Location code (ex: US, EU)"
+    type        = string
+}
+
+variable "state_bucket_name" {
+    description = "Name of the bucket in which the state is stored"
     type        = string
 }
 
