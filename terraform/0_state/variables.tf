@@ -36,11 +36,6 @@ variable "location" {
     type        = string
 }
 
-variable "state_bucket_name" {
-    description = "Name of the bucket in which the state is stored"
-    type        = string
-}
-
 variable "state_bucket_users" {
     description = "List of users that can access the state bucket"
     type        = list(string)

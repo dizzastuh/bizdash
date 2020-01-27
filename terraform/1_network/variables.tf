@@ -19,11 +19,3 @@ variable "zone" {
   description = "Zone the project uses"
   type        = string
 }
-
-
-# -- State -- #
-
-variable "state_bucket_name" {
-    description = "Name of the bucket in which the state is stored"
-    type        = string
-}

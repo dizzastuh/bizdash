@@ -15,7 +15,7 @@ provider "google" {
 # -- State Bucket -- #
 
 resource "google_storage_bucket" "tf_state_bucket" {
-  name     = var.state_bucket_name
+  name     = "${var.project}-tfstate-${var.env}"
   location = var.location
 
   versioning {
