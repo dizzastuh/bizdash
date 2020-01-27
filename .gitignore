@@ -2,6 +2,7 @@
 
 **/secrets.yaml
 **/values.yaml
+**/*.properties
 **/*.tfvars
 **/.envrc
 

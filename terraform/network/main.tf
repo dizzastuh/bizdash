@@ -1,10 +1,13 @@
-provider "google" {
-  credentials = "${file("account.json")}"
-  project     = "${var.project}"
-  region      = "${var.region}"
-  zone        = "${var.zone}"
+terraform {
+  backend "gcs" {
+    bucket  = var.state_bucket_name
+    prefix  = "network"
+  }
 }
 
-resource "google_compute_address" "ip_address" {
-  name = "${var.ip_name}"
+provider "google" {
+  credentials = "${file("account.json")}"
+  project     = var.project
+  region      = var.region
+  zone        = var.zone
 }
