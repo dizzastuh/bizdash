@@ -1,4 +1,3 @@
-charts/db/secrets.yaml
 charts/db/values.yaml
 terraform/.envrc
 terraform/0_state/prod.tfvars
