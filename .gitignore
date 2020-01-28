@@ -18,3 +18,4 @@
 **/terraform.*
 /terraform/network/prod.tfvars
 /terraform/_common_vars/bizdash-prod.tfvars
+/kops/.envrc

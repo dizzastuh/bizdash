@@ -1,4 +1,5 @@
 charts/db/values.yaml
+kops/.envrc
 terraform/.envrc
 terraform/0_state/prod.tfvars
 terraform/1_network/prod.tfvars
