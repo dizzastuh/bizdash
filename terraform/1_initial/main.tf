@@ -10,8 +10,6 @@ provider "google" {
   zone        = var.zone
 }
 
-# -- Domain IP -- #
-
-resource "google_compute_address" "ip_address" {
-  name = "${var.project}-ip-${var.env}"
+locals {
+  name_prefix="${var.project}-${var.env}"
 }

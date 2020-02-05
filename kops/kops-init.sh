@@ -5,5 +5,11 @@ if [ -z "$PROJECT" ]; then
   exit 1
 fi
 
-kops create cluster ${CLUSTER} --cloud ${CLOUD} --zones {ZONES} --state ${KOPS_STATE_STORE} --project=${PROJECT}
+kops create cluster ${CLUSTER} \
+  --cloud ${CLOUD}
+  --project=${PROJECT} 
+  --zones {ZONES}
+  --state ${KOPS_STATE_STORE}
+  --networking weave
+
 kops update cluster --name ${CLUSTER} --yes

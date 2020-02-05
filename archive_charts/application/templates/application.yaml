@@ -1,0 +1,18 @@
+apiVersion: v2
+name: bizdash
+
+type: application
+
+version: 0.1.0
+
+appVersion: 0.1.0
+
+dependencies:
+  - name: bizdash-database
+    version: 1.6.2
+    repository: "@stable"
+    alias: influxdbstable
+  - name: bizdash-dashboard
+    version: 1.6.2
+    repository: "@stable"
+    alias: grafanastable

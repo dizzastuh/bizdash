@@ -1,4 +1,0 @@
-ADDRESS_NAME=$1
-
-gcloud compute addresses create $ADDRESS_NAME --global
-gcloud compute addresses describe $ADDRESS_NAME --global
