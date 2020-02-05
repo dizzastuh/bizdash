@@ -1,6 +1,6 @@
-charts/db/values.yaml
-kops/.envrc
-terraform/.envrc
-terraform/0_state/prod.tfvars
-terraform/1_network/prod.tfvars
-terraform/_common_vars/bizdash-prod.tfvars
+0_kops/.envrc
+1_terraform/.envrc
+1_terraform/0_state/prod.tfvars
+1_terraform/1_network/prod.tfvars
+1_terraform/_common_vars/bizdash-prod.tfvars
+2_helm/charts/db/values.yaml
