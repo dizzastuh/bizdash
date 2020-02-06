@@ -3,3 +3,4 @@
 1_terraform/0_state/prod.tfvars
 1_terraform/1_network/prod.tfvars
 1_terraform/_common_vars/bizdash-prod.tfvars2_helm/values.yaml
+2_helm/secrets.yaml

@@ -20,3 +20,4 @@
 /terraform/_common_vars/bizdash-prod.tfvars
 /kops/.envrc
 /2_helm/values.yaml
+/2_helm/secrets.yaml
