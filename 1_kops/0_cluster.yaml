@@ -1,0 +1,18 @@
+apiVersion: kops.k8s.io/v1alpha2
+kind: Cluster
+metadata:
+  name: {{ .environment }}.{{ .dns_zone }}
+spec:
+  api:
+    loadBalancer:
+      type: Public
+      additionalSecurityGroups:
+      - sg-xxxxxxxx
+      - sg-xxxxxxxx
+  docker:
+    {{ include "docker" . | indent 4 }}
+  additionalPolicies:
+    master: |
+      {{ include "masters.json" . | indent 6 }}
+    node: |
+      {{ include "nodes.json" . | indent 6 }}
