@@ -10,6 +10,3 @@ provider "google" {
   zone        = var.zone
 }
 
-locals {
-  name_prefix="${var.project}-${var.env}"
-}
