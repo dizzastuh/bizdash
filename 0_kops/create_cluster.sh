@@ -7,11 +7,10 @@ kops create cluster \
        --project $PROJECT \
        --yes
 
-echo "UPDATING CLUSTER..."
-kops update cluster --name $CLUSTER --yes
+# echo "UPDATING CLUSTER..."
+# kops update cluster --name $CLUSTER --yes
 
-echo "UPDATING CLUSTER..."
-kops rolling-update cluster $CLUSTER
+# echo "UPDATING CLUSTER..."
+# kops rolling-update cluster $CLUSTER
 
-kops export kubecfg $CLUSTER
-
+# kops export kubecfg $CLUSTER

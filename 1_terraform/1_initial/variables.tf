@@ -24,3 +24,8 @@ variable "zone" {
   description = "Zone the project uses"
   type        = string
 }
+
+variable "domain_name" {
+  description = "Name of the domain the project belongs to"
+  type        = string
+}
