@@ -1,6 +1,7 @@
-0_kops/.envrc
-1_terraform/.envrc
-1_terraform/0_state/prod.tfvars
-1_terraform/1_initial/prod.tfvars
+0_terraform/.envrc
+0_terraform/_common_vars/bizdash-prod.tfvars
+0_terraform/0_state/prod.tfvars
+0_terraform/1_initial/prod.tfvars
+1_kops/.envrc
 2_helm/secrets.yaml
 2_helm/values.yaml
