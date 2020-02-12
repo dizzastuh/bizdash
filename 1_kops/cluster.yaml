@@ -60,7 +60,7 @@ bastion_host:
 #     -----END RSA PRIVATE KEY-----
 
 # Set the name of the Kubernetes cluster  
-cluster_name: mycluster
+cluster_name: {{ .Values.domain }}
 
 
 # The Kubernetes version used. The default versions of Kubernetes

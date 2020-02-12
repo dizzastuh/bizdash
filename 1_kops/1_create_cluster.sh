@@ -5,7 +5,7 @@ kops create cluster \
        --cloud gce \
        --state $KOPS_STATE_STORE \
        --zones $ZONES \
-       --name $CLUSTER \
+       --name $PROJECT.$DOMAIN \
        --project $PROJECT \
        --yes
 
