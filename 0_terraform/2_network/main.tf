@@ -1,7 +1,3 @@
-locals {
-  prefix = "${var.env}-${var.project}"
-}
-
 # -- Setup -- #
 terraform {
   backend "gcs" {}

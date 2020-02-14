@@ -5,6 +5,7 @@ VAR_FILES =	-var-file="../_common_vars/$(PROJECT)-$(ENV).tfvars"
 
 .PHONY: init
 init:
+	rm -r ./.terraform
 	terraform init \
 		-backend-config="bucket=$(PROJECT)-tfstate-$(ENV)" \
 		-backend-config="prefix=network"
