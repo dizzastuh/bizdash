@@ -21,3 +21,4 @@
 /kops/.envrc
 /2_helm/values.yaml
 /2_helm/secrets.yaml
+/1_kops/values.yaml
