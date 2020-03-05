@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bizdashdb
+spec:
+  replicas: {{ .Values.bizdashdb.replicas }}
+  selector:
+    matchLabels:
+      app: bizdash
+  template:
+    metadata:
+      labels:
+        app: bizdash
+    spec:
+      containers:
+      - name: bizdashdb
+        image: {{ .Values.bizdashdb.image }}
+        ports:
+        - containerPort: 80

@@ -1,8 +1,0 @@
-apiVersion: storage.k8s.io/v1beta1
-kind: StorageClass
-metadata:
-  name: {{ .Vallues.project }}-gce-pd
-provisioner: pd.csi.storage.gke.io
-parameters:
-  type: pd-standard
-  disk-encryption-kms-key: {{ .Values.kms.key_id }}

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bizdashnginx
+spec:
+  replicas: {{ .Values.bizdashnginx.replicaCount }}
+  selector:
+    matchLabels:
+      app: bizdash
+  template:
+    metadata:
+      labels:
+        app: bizdash
+    spec:
+      containers:
+      - name: bizdashnginx
+        image: {{ .Values.bizdashnginx.image }}
+        ports:
+        - containerPort: 80

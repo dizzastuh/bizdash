@@ -1,4 +1,4 @@
-apiVersion: v3
+apiVersion: v2
 name: bizdash
 description: A Helm chart for Kubernetes
 
@@ -21,15 +21,15 @@ version: 0.1.0
 appVersion: 1.0.0
 
 dependencies:
-    - name: nginx-ingress
-      version: 1.29.6
-      repository: "@stable"
-      asias: bdash-nginx
-    - name: influxdb
-      version: 3.2.0
-      repository: "@stable"
-      alias: bizdash-db
-    - name: grafana
-      version: 4.5.0
-      repository: "@stable"
-      alias: bdash-grafana
+  - name: nginx-ingress
+    version: 1.29.6
+    repository: "@stable"
+    alias: bizdashnginx
+  - name: influxdb
+    version: 3.2.0
+    repository: "@stable"
+    alias: bizdashdb
+  - name: grafana
+    version: 4.5.0
+    repository: "@stable"
+    alias: bizdashboard

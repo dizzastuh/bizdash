@@ -1,0 +1,12 @@
+dependencies:
+- name: nginx-ingress
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 1.29.6
+- name: influxdb
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 3.2.0
+- name: grafana
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 4.5.0
+digest: sha256:c64ab905d00b61951ef71cb4e16730f4755e1884c739629f848b3177f0825620
+generated: "2020-02-17T20:54:09.20084319-06:00"

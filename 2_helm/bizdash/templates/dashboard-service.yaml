@@ -5,11 +5,11 @@ metadata:
   labels:
     {{- include "bizdash.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 443
+      targetPort: https
       protocol: TCP
-      name: http
+      name: https
   selector:
     {{- include "bizdash.selectorLabels" . | nindent 4 }}
